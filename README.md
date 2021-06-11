@@ -17,7 +17,7 @@ Here are some ideas to get you started:
 
 see https://fejiro-eni.github.io
 
-#### Here's whats up with me at the moment
+<!-- #### Here's whats up with me at the moment
 - There is nothing here for now
-- 
+-  -->
 
