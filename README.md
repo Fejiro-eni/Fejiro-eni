@@ -15,6 +15,9 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-## Here's whats up with me at the moment
+see https://fejiro-eni.github.io
 
+#### Here's whats up with me at the moment
+- There is nothing here for now
+- 
 
