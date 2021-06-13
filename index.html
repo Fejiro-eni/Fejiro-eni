@@ -22,29 +22,29 @@
 		overflow: hidden;
 	}
 	
-	.head-cont{		
+	.head-cont {
 	    max-width: 250px;
-	    background: rgb(0 0 0 / 70%); /*#1d62ff*/
+	    background: transparent;
 	    /* border-radius: 5px; */
-	        border-left: 1px solid #d8d9d4;
-	    float: right;
-	    margin-bottom: -10px;
+	    /* border-left: 1px solid #d8d9d4; */
+	    /* float: right; */
+	    /* margin-bottom: -10px; */
 	    transition: .6s;
-	    box-shadow: 0 0 9px grey;
+	    /* box-shadow: 0 0 9px grey; */
 	    position: absolute;
-	    right: 0;
+	    right: 0; 
 	    bottom: 0;
 	    height: 100vh;
 	    margin: 0;
-	    padding-top: 20vh;
+	    padding-top: 15vh;
 	}
 
 
 	.head-cont *{
-		color: white;
+		/*color: white;*/
 		/*font-weight: 600;*/
 		text-transform: none;
-		text-align: left;
+		text-align: right;
 	}
 
 	.tm-home-subtitle{
@@ -54,7 +54,7 @@
 	}
 
 	.thelist{
-	    padding: 0 16px;
+	    padding: 0 ;
 	    padding-bottom: 20px;
 	}
 
@@ -80,11 +80,33 @@
 		background-color: white; 
 	}
 
+	.hide-otherwise{
+		display: none;
+	}
+
+	.show-otherwise{
+		display: block
+	}
+
+	.head-cont h2 seperator{
+		color: black;
+		font-size: 1.2em;
+	}
+
+	.head-cont h2 *{
+		display: inline-block;
+	}
+
+
+
 	@media only screen and (min-width: 767px){
 		.head-cont{		
 			max-width: 350px;
 		    /*background: black;*/
-	    border-left: 2px solid white;
+	    	/*border-left: 2px solid white;*/
+	    	right: unset;
+	    	margin-left: 55%;
+	    	padding-top: 20vh; 
 		}
 
 		.head-cont *{
@@ -92,13 +114,21 @@
 			text-align: left;
 			/*font-weight: 200;*/
 		}
+
+		.hide-otherwise{
+			display: block;
+		}
+
+		.show-otherwise{
+			display: none;
+		}
 	}
   
 </style>
 
 
 </head>
-<body data-spy="scroll" data-target="#rock-navigation" style="background: #dadbd6;">
+<body data-spy="scroll" data-target="#rock-navigation" style="background: #dadbd6; background: #fff">
 	<!-- START NAVIGATION -->
 	<div class="navbar navbar-default bs-dos-nav navbar-fixed-top sticky-navigation" role="navigation">
 		<div class="container">
@@ -114,7 +144,7 @@
 			<nav class="collapse navbar-collapse" id="rock-navigation">
 				<ul class="nav navbar-nav navbar-right main-navigation text-uppercase">
 					<li><a href="#home" class="smoothScroll">Home</a></li>
-					<li><a href="#work" class="smoothScroll">My Work</a></li>
+					<li><a href="#work" class="smoothScroll">Profession</a></li>
 					<li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
 					<li><a href="#resume" class="smoothScroll">Resume</a></li>
 					<li><a href="#about" class="smoothScroll">About</a></li>
@@ -131,17 +161,28 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2 col-sm-1"></div>
-				<div class="col-md-3  head-cont wow animated fadeInRight" style="animation-delay: .8s;">
-					<h1 class="tm-home-title"><span>Fejiro Eni</strong></h1>
-					<h2 class="tm-home-subtitle">Creative Innovator</h2>
-					<p style="padding-bottom: 40px;"> Electrical Electronics Engineer | Software Developer | UI / UX  Designer | Multimedia Consultant | Graphics Designer </p>
+				<div class="col-md-3  head-cont">
+					<h1 class="tm-home-title hide-otherwise  wow animated fadeInLeft" style="animation-delay: .8s;"><span>Fejiro Eni</strong></h1>
+					<h2 class="tm-home-subtitle hide-otherwise  wow animated fadeInLeft" style="animation-delay: .8s;">
+						<span class=" wow animated fadeInDown" style="animation-delay: 1.2s;">Designer</span> <!-- <seperator class=" wow animated fadeInDown" style="animation-delay: 1s;">|</seperator> -->  <br>
+						<span class=" wow animated fadeInDown" style="animation-delay: 1.6s;">Engineer</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator> -->  <br>
+						<span class=" wow animated fadeInDown" style="animation-delay: 2s;">Entrepreneur</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.8s;">|</seperator> --> <br>
+					</h2>
+
+					<h1 class="tm-home-title show-otherwise  wow animated fadeInRight" style="animation-delay: .8s;"><span>Fejiro Eni</strong></h1>
+					<h2 class="tm-home-subtitle show-otherwise  wow animated fadeInRight" style="animation-delay: .8s;">
+						<span class=" wow animated fadeInDown" style="animation-delay: 1.2s;">Designer</span><!--  <seperator class=" wow animated fadeInDown" style="animation-delay: 1s;">|</seperator>  --><br>
+						<span class=" wow animated fadeInDown" style="animation-delay: 1.6s;">Engineer</span><!--  <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator>  --><br>
+						<span class=" wow animated fadeInDown" style="animation-delay: 2s;">Entrepreneur</span><!--  <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.8s;">|</seperator> --><br>
+					</h2>
+					<!-- <p style="padding-bottom: 40px;"> Electrical Electronics Engineer | Software Developer | UI / UX  Designer | Multimedia Consultant | Graphics Designer </p> -->
 
 					<ul class="thelist">
-						<a href="#work" class="smoothScroll"><li>Electrical Electronics Engineer </li></a>
-						<a href="#work" class="smoothScroll" ><li>Software Developer </li></a>
-						<a href="#work" class="smoothScroll" ><li>UI / UX  Designer </li></a>
-						<a href="#work" class="smoothScroll" ><li>Multimedia Consultant </li></a>
-						<a href="#work" class="smoothScroll" ><li>Graphics Designer </li></a>
+						<a href="#work" class="smoothScroll" ><li>Abilities</li></a>
+						<a href="#work" class="smoothScroll" ><li>Portfolio</li></a>
+						<a href="#work" class="smoothScroll" ><li>Resume</li></a>
+						<a href="#work" class="smoothScroll" ><li>About</li></a>
+						<!-- <a href="#work" class="smoothScroll" ><li>Graphics Designer </li></a> -->
 
 					</ul>
 				</div>
