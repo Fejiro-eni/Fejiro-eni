@@ -61,14 +61,30 @@
 	.thelist li{
 		margin: 10px 0;
 		list-style: none;
+		display: inline-block;
+	}
+
+	.thelist a{
+		/*display: block;*/
 	}
 
 	a{
 		cursor: pointer;
 	}
 
-	.thelist a:hover li{
-		list-style: disc;
+	.thelist a li .fa{
+		/*list-style: disc;*/
+		font-size: .2em;
+		color: tomato;
+		transition: .2s;
+		display: inline-block;
+		top: -0.6em;
+    	position: relative;
+	}
+
+	.thelist a:hover li .fa{
+		/*list-style: disc;*/
+		font-size: .4em;
 	}
 
 
@@ -178,19 +194,19 @@
 					<!-- <p style="padding-bottom: 40px;"> Electrical Electronics Engineer | Software Developer | UI / UX  Designer | Multimedia Consultant | Graphics Designer </p> -->
 
 					<ul class="thelist  hide-otherwise">
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 2.8s;">Portfolio</li></a>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 2.6s;">Abilities</li></a>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 3.0s;">Resume</li></a>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 3.2s;">About</li></a>
+						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 2.8s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
+						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 2.6s;"><i class="fa fa-circle"> </i> Abilities</li></a><br>
+						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 3.0s;"><i class="fa fa-circle"> </i> Resume</li></a><br>
+						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 3.2s;"><i class="fa fa-circle"> </i> About</li></a><br>
 						<!-- <a href="#work" class="smoothScroll" ><li>Graphics Designer </li></a> -->
 					</ul>
 
 
 					<ul class="thelist  show-otherwise">
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 2.8s;">Portfolio</li></a>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 2.6s;">Abilities</li></a>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 3.0s;">Resume</li></a>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 3.2s;">About</li></a>
+						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 2.8s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
+						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 2.6s;"><i class="fa fa-circle"> </i> Abilities</li></a><br>
+						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 3.0s;"><i class="fa fa-circle"> </i> Resume</li></a><br>
+						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 3.2s;"><i class="fa fa-circle"> </i> About</li></a><br>
 						<!-- <a href="#work" class="smoothScroll" ><li>Graphics Designer </li></a> -->
 					</ul>
 				</div>
@@ -353,7 +369,7 @@
 	</section>
 	<!-- END work -->
 
-	
+
 
 
 	<!-- START RESUME -->
