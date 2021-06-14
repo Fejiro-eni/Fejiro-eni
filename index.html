@@ -113,7 +113,19 @@
 		display: inline-block;
 	}
 
+	.iso-boxy {
+	    position: relative;
+	    min-height: 50px;
+	    /*float: left;*/
+	    overflow: hidden;
+	    margin:0;
+	    padding:0;
+	}
 
+	.filter-wrapper li {
+	    display: inline-block;
+	    margin: 0;
+	}
 
 	@media only screen and (min-width: 767px){
 		.head-cont{		
@@ -194,7 +206,7 @@
 					<!-- <p style="padding-bottom: 40px;"> Electrical Electronics Engineer | Software Developer | UI / UX  Designer | Multimedia Consultant | Graphics Designer </p> -->
 
 					<ul class="thelist  hide-otherwise">
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 2.8s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
+						<a href="#portfolio" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 2.8s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
 						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 2.6s;"><i class="fa fa-circle"> </i> Abilities</li></a><br>
 						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 3.0s;"><i class="fa fa-circle"> </i> Resume</li></a><br>
 						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 3.2s;"><i class="fa fa-circle"> </i> About</li></a><br>
@@ -203,7 +215,7 @@
 
 
 					<ul class="thelist  show-otherwise">
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 2.8s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
+						<a href="#portfolio" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 2.8s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
 						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 2.6s;"><i class="fa fa-circle"> </i> Abilities</li></a><br>
 						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 3.0s;"><i class="fa fa-circle"> </i> Resume</li></a><br>
 						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 3.2s;"><i class="fa fa-circle"> </i> About</li></a><br>
@@ -225,21 +237,28 @@
 			<div class="row">
 				<div class="col-md-12 wow bounce">
 					<div class="title">
-						<h2 class="tm-portfolio-title">My <strong>Portfolio</strong></h2>
+						<h2 class="tm-portfolio-title" style=" color: black; ">
+							<strong style="  z-index: 2;  position: relative; display: inline-block;">Portfolio</strong><br>
+							<span style=" position: relative; z-index: 1; display: inline-block;">&amp;</span> <br>
+							<strong style=" position: relative; z-index: 1;display: inline-block; ">Case Studies</strong> 
+							<!-- <span style=" color: #e4e8ff; font-weight: bold; opacity: 1.08; font-size: 3em; height: 0; position: absolute; display: inline-block; left: 50%; transform: translate(-50%, -67px); z-index: 0; ">Portfolio</span> -->
+						</h2>
 					</div>
 
 					<!-- START ISO SECTION -->
 					<div class="iso-section">
-						<ul class="filter-wrapper clearfix">
+						<ul class="filter-wrapper clearfix" style=" padding: 0;">
 							<li><a href="#" class="opc-main-bg selected" data-filter="*">All</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".html">HTML</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".photoshop">Photoshop</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">Wordpress</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".html">Web Apps</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".photoshop">Mobile Apps</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">UI/UX</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">Graphics</a></li>
 							<li><a href="#" class="opc-main-bg" data-filter=".mobile">Mobile</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".mobile">Start Ups</a></li>
 						</ul>
 						<div class="iso-box-section">
 							<div class="iso-box-wrapper col4-iso-box">
-								<div class="iso-box html photoshop wordpress mobile col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-boxy html photoshop wordpress mobile col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img1.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
@@ -248,7 +267,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="iso-box html wordpress mobile col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-boxy html wordpress mobile col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img2.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
@@ -257,7 +276,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="iso-box wordpress col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-boxy wordpress col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img3.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
@@ -266,7 +285,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="iso-box html mobile col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-boxy html mobile col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img4.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
@@ -275,7 +294,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="iso-box wordpress col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-boxy wordpress col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img5.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
@@ -284,7 +303,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="iso-box html photoshop col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-boxy html photoshop col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img6.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
@@ -293,7 +312,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="iso-box photoshop col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-boxy photoshop col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img7.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
@@ -302,7 +321,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="iso-box wordpress col-md-3 col-sm-3 col-xs-12">
+								<div class="iso-boxy wordpress col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img8.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
