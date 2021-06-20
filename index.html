@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightslider.css">
 	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
 
 <style type="text/css">
@@ -60,8 +61,10 @@
 
 	.thelist li{
 		margin: 10px 0;
-		list-style: none;
-		display: inline-block;
+	    list-style: none;
+	    display: inline-block;
+	    color: #506ee8;
+	    font-weight: 500;
 	}
 
 	.thelist a{
@@ -127,6 +130,101 @@
 	    margin: 0;
 	}
 
+	case{
+	    float: right;
+	    margin-top: -32px;
+	    background-color: #2196f3;
+	    position: absolute;
+	    color: white;
+	    padding: 5px;
+	    font-weight: bold;
+	    right: 1px;
+	}
+
+	.m-t-20{
+		/*margin-top: 20px;*/
+	}
+
+
+
+	.resume-section{
+	    text-transform: uppercase;
+	    letter-spacing: 0px;
+	    color: #0d60f9;
+	    /*margin-bottom: 30px;*/
+	}
+
+	.resume-company{
+	    color: #607d8b;
+	    /*margin: 10px 0;*/
+	    /*display: block;*/
+    	/*margin-top: 30px;*/
+	}
+
+	.resume-list{
+/*	    padding: 0;
+	    margin-left: 5px;*/
+	    /*border-left: 1px solid #6091ff;*/
+		 margin-bottom:100px;
+	}
+
+
+	.resume-item{
+	    margin-left: -7px;
+	    list-style: none;
+	    display: flex;
+	    align-items: flex-end;
+   		border-bottom: 1px solid #000;
+   		margin: 0 !important;
+	}
+
+	.resume-item.active + .resume-item > .fa-dot-circle-o{
+			transform: translate(0px, -20px);	
+			font-size: 1.5em;
+	}
+
+	.resume-item .fa-dot-circle-o{
+		transform: translate(0px, 20px);
+		transition: .6s;
+	}
+
+
+	.resume-item .fa-dot-circle-o:after{
+		background: #000;
+	    content: '';
+	    height: 100vh;
+	    left: 50%;
+	    position: absolute;
+	    top: 100%;
+	    width: 1px;
+
+	}
+
+	.resume-item p{
+		line-height: 1.2em;
+		margin-left: 10px;
+	}
+
+	.resume-item .fa-dot-circle-o{
+	    color: #000;
+	}
+
+	.resume-position{
+	    color: black;
+	    /*margin-left: 10px;*/
+	}
+
+	.resume-duration{
+	    /*margin-left: 25px;*/
+	    color: #607d8b;
+	}
+
+	.correct-lg{
+		display: none;
+		border:none !important;
+	}
+
+
 	@media only screen and (min-width: 767px){
 		.head-cont{		
 			max-width: 350px;
@@ -150,8 +248,39 @@
 		.show-otherwise{
 			display: none;
 		}
+
+		.correct-lg{
+			display: flex;
+		}
+
 	}
+
+
+.tm-home-subtitle {
+    color: #000000;
+}	
+
+
+
+
+    ul.content-slider, ul.content-slider > li{
+    width:100% !important;
+    }
+
+    #content-slider li{
+    overflow: hidden;
+    position: relative;
+    height: 210px;
+    max-width: 80%;
+    /*right: -1%;*/
+    padding: 20px;
+    transition: 2s
+    }
   
+    .lSPager{
+    	display: none;
+    }
+
 </style>
 
 
@@ -173,7 +302,7 @@
 				<ul class="nav navbar-nav navbar-right main-navigation text-uppercase">
 					<li><a href="#home" class="smoothScroll">Home</a></li>
 					<li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
-					<li><a href="#work" class="smoothScroll">Profession</a></li>
+					<li><a href="#resume" class="smoothScroll">Resume</a></li>
 					<li><a href="#resume" class="smoothScroll">Resume</a></li>
 					<li><a href="#about" class="smoothScroll">About</a></li>
 					<li><a href="#contact" class="smoothScroll">Contact</a></li>
@@ -185,40 +314,46 @@
 	<!-- END NAVIGATION -->
 
 	<!-- START HOME -->
-	<section id="home" class="templatemo-home  wow animated fadeInLeft prevent-text-select" style="opacity: 1 !important; ">
+	<section id="home" class="m-home  wow animated fadeInLeft prevent-text-select" style="opacity: 1 !important; ">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2 col-sm-1"></div>
 				<div class="col-md-3  head-cont">
-					<h1 class="tm-home-title hide-otherwise  wow animated fadeInLeft" style="animation-delay: .8s;"><span>Fejiro Eni</strong></h1>
-					<h2 class="tm-home-subtitle hide-otherwise  wow animated fadeInLeft" style="animation-delay: .8s;">
-						<span class=" wow animated fadeInDown" style="animation-delay: 1.2s;">Designer</span> <!-- <seperator class=" wow animated fadeInDown" style="animation-delay: 1s;">|</seperator> -->  <br>
-						<span class=" wow animated fadeInDown" style="animation-delay: 1.6s;">Engineer</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator> -->  <br>
-						<span class=" wow animated fadeInDown" style="animation-delay: 2s;">Entrepreneur</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.8s;">|</seperator> --> <br>
+					<h1 class="tm-home-title hide-otherwise   animated fadeInLeft" style="animation-delay: .8s;"><span>Fejiro Eni</strong></h1>
+					<h2 class="tm-home-subtitle hide-otherwise   animated fadeInLeft" style="animation-delay: .8s;">
+						<!-- <span class="  animated fadeInDown" style="animation-delay: 1s;">I'm a</span><br> -->
+						<span class="  animated fadeInDown" style="animation-delay: 1.2s;">Designer,</span> <!-- <seperator class=" wow animated fadeInDown" style="animation-delay: 1s;">|</seperator> -->  
+						<span class="  animated fadeInDown" style="animation-delay: 1.6s;">Engineer,</span>
+						<span class="  animated fadeInDown" style="animation-delay: 2s;">Innovator,</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator> -->  
+						<span class="  animated fadeInDown" style="animation-delay: 2.4s;">Entrepreneur,</span>
+						<span class="  animated fadeInDown" style="animation-delay: 2.8s;">&amp; Public Speaker.</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.8s;">|</seperator> --> 
 					</h2>
 
-					<h1 class="tm-home-title show-otherwise  wow animated fadeInRight" style="animation-delay: .8s;"><span>Fejiro Eni</strong></h1>
-					<h2 class="tm-home-subtitle show-otherwise  wow animated fadeInRight" style="animation-delay: .8s;">
-						<span class=" wow animated fadeInDown" style="animation-delay: 1.2s;">Designer</span><!--  <seperator class=" wow animated fadeInDown" style="animation-delay: 1s;">|</seperator>  --><br>
-						<span class=" wow animated fadeInDown" style="animation-delay: 1.6s;">Engineer</span><!--  <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator>  --><br>
-						<span class=" wow animated fadeInDown" style="animation-delay: 2s;">Entrepreneur</span><!--  <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.8s;">|</seperator> --><br>
+					<h1 class="tm-home-title show-otherwise   animated fadeInRight" style="animation-delay: .8s;"><span>Fejiro Eni</strong></h1>
+					<h2 class="tm-home-subtitle show-otherwise   animated fadeInRight" style="animation-delay: .8s;">
+						<!-- <span class="  animated fadeInDown" style="animation-delay: 1s;">I'm a</span><br> -->
+						<span class="  animated fadeInDown" style="animation-delay: 1.2s;">Designer,</span><!--  <seperator class=" wow animated fadeInDown" style="animation-delay: 1s;">|</seperator>  -->
+						<span class="  animated fadeInDown" style="animation-delay: 1.6s;">Engineer,</span>
+						<span class="  animated fadeInDown" style="animation-delay: 2s;">Innovator,</span><!--  <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator>  -->
+						<span class="  animated fadeInDown" style="animation-delay: 2.4s;">Entrepreneur,</span>
+						<span class="  animated fadeInDown" style="animation-delay: 2.8s;">&amp; Public Speaker.</span><!--  <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.8s;">|</seperator> -->
 					</h2>
 					<!-- <p style="padding-bottom: 40px;"> Electrical Electronics Engineer | Software Developer | UI / UX  Designer | Multimedia Consultant | Graphics Designer </p> -->
 
 					<ul class="thelist  hide-otherwise">
-						<a href="#portfolio" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 2.8s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 2.6s;"><i class="fa fa-circle"> </i> Abilities</li></a><br>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 3.0s;"><i class="fa fa-circle"> </i> Resume</li></a><br>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInLeft" style="animation-delay: 3.2s;"><i class="fa fa-circle"> </i> About</li></a><br>
+						<a href="#portfolio" class="smoothScroll" ><li class=" animated fadeInLeft" style="animation-delay: 3.4s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
+						<a href="#resume" class="smoothScroll" ><li class=" animated fadeInLeft" style="animation-delay: 3.6s;"><i class="fa fa-circle"> </i> Resume</li></a><br>
+						<a href="#work" class="smoothScroll" ><li class=" animated fadeInLeft" style="animation-delay: 3.8s;"><i class="fa fa-circle"> </i> Speaking</li></a><br>
+						<a href="#work" class="smoothScroll" ><li class=" animated fadeInLeft" style="animation-delay: 4s;"><i class="fa fa-circle"> </i> About</li></a><br>
 						<!-- <a href="#work" class="smoothScroll" ><li>Graphics Designer </li></a> -->
 					</ul>
 
 
 					<ul class="thelist  show-otherwise">
-						<a href="#portfolio" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 2.8s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 2.6s;"><i class="fa fa-circle"> </i> Abilities</li></a><br>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 3.0s;"><i class="fa fa-circle"> </i> Resume</li></a><br>
-						<a href="#work" class="smoothScroll" ><li class="wow animated fadeInRight" style="animation-delay: 3.2s;"><i class="fa fa-circle"> </i> About</li></a><br>
+						<a href="#portfolio" class="smoothScroll" ><li class=" animated fadeInRight" style="animation-delay: 3.4s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
+						<a href="#resume" class="smoothScroll" ><li class=" animated fadeInRight" style="animation-delay: 3.6s;"><i class="fa fa-circle"> </i> Resume</li></a><br>
+						<a href="#work" class="smoothScroll" ><li class=" animated fadeInRight" style="animation-delay: 3.8s;"><i class="fa fa-circle"> </i> Speaking</li></a><br>
+						<a href="#work" class="smoothScroll" ><li class=" animated fadeInRight" style="animation-delay: 4s;"><i class="fa fa-circle"> </i> About</li></a><br>
 						<!-- <a href="#work" class="smoothScroll" ><li>Graphics Designer </li></a> -->
 					</ul>
 				</div>
@@ -235,8 +370,8 @@
 	<section id="portfolio" class="tm-portfolio">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 wow bounce">
-					<div class="title">
+				<div class="col-md-12 ">
+					<div class="title wow fadeInDown" data-wow-offset="100">
 						<h2 class="tm-portfolio-title" style=" color: black; ">
 							<strong style="  z-index: 2;  position: relative; display: inline-block;">Portfolio</strong><br>
 							<span style=" position: relative; z-index: 1; display: inline-block;">&amp;</span> <br>
@@ -253,7 +388,7 @@
 							<li><a href="#" class="opc-main-bg" data-filter=".photoshop">Mobile Apps</a></li>
 							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">UI/UX</a></li>
 							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">Graphics</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".mobile">Mobile</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".mobile">Animations</a></li>
 							<li><a href="#" class="opc-main-bg" data-filter=".mobile">Start Ups</a></li>
 						</ul>
 						<div class="iso-box-section">
@@ -261,6 +396,7 @@
 								<div class="iso-boxy html photoshop wordpress mobile col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img1.jpg" class="fluid-img" alt="portfolio img">
+										<case style="">case study</case>
 										<div class="portfolio-overlay">
 											<h3 class="portfolio-item-title">UX Design</h3>
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
@@ -343,9 +479,9 @@
 
 
 	<!-- START work -->
-	<section id="work" class="tm-padding-top-bottom-100">
+	<section id="resume" class="tm-padding-top-bottom-100">
 
-		<a href="#work" class="btn btn-default smoothScroll tm-view-more-btn">Let's Begin</a>
+<!-- 		<a href="#work" class="btn btn-default smoothScroll tm-view-more-btn">Let's Begin</a>
 		<div class="container">
 			<div class="row">
 									<ul class="thelist">
@@ -355,11 +491,245 @@
 						<a href="#work" class="smoothScroll" ><li>Multimedia Consultant </li></a>
 						<a href="#work" class="smoothScroll" ><li>Graphics Designer </li></a>
 
-					</ul>
-				<div class="col-md-offset-1 col-md-11">
-					<h2 class="title">My <strong>Work</strong></h2>						
+					</ul> -->
+
+				<div class="col-md-12 " wow fadeInDown data-wow-offset="100" style=" margin-bottom: 40px;   ">
+					<h2 class="tm-portfolio-title"><strong dataooffesr>Resume</strong></h2>						
 				</div>
-				<div class="col-md-4 col-sm-4">
+
+<div class="container" >
+				
+
+				<p style=" margin: 0; font-weight: bold; ">WORK HISTORY</p>
+				<h4 class="resume-section wow animated letter-stretch"  data-wow-offset="200"  style="margin-top: 0px; animation-duration: 2s;">TimeLine</h4>
+
+</div>
+					<ul class="resume-list" id="content-slider">
+
+						<li class="resume-item correct-lg">
+						</li>
+
+
+
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<p>
+								<span class="tm-info-label resume-position" style="">Director of Operations.</span>
+								<br>
+								<b class="resume-company " >Unicus Technologies.</b>
+								<br>
+								<span class="resume-duration">Dec. 2019 - Present</span>
+							</p>
+						</li>
+
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o" ></i>
+							<p>
+								<span class="tm-info-label resume-position" >Product Manager.</span>
+								<br>
+								<b class="resume-company " >Unicus Technologies.</b>
+								<br>
+								<span class="resume-duration">Aug. 2019 – Dec 2019.</span>
+							</p>
+						</li>
+
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o" ></i>
+							<p>
+								<span class="tm-info-label resume-position" >Lead Software Engineer.</span>
+								<br>
+								<b class="resume-company " >Unicus Technologies.</b>
+								<br>
+								<span class="resume-duration">Apr. 2018 – Aug 2019.</span>
+							</p>
+						</li>
+
+    						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<p>
+								<span class="tm-info-label resume-position" style="">Software Developer,  UI/UX Designer,   Graphics Designer,   Cinematographer,   Video Editor,  2D &amp; 3D Animator,  Lighting Technician &amp; Designer.</span>
+								<br>
+								<b class="resume-company " >Freelance.</b>
+								<br>
+								<span class="resume-duration">Oct. 2015 – Apr. 2018.</span>
+							</p>	
+						</li>
+
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<p>
+								<span class="tm-info-label resume-position" style="">Multimedia Consultant.</span>
+								<br>
+								<b class="resume-company " >Mediax Multimedia Concepts.</b>
+								<br>
+								<span class="resume-duration">Oct. 2015  - Present</span>
+							</p>
+						</li>
+
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<p>
+								<span class="tm-info-label resume-position" style="">Creative Director.</span>
+								<br>
+								<b class="resume-company " >Mediax Multimedia Concepts.</b>
+								<br>
+								<span class="resume-duration">Jun. 2019 – Oct. 2015.</span>
+							</p>
+						</li>
+
+
+
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<p>
+								<span class="tm-info-label resume-position" style="">Multimedia Designer <br> 
+								Graphics Designer,   Cinematographer,   Video Editor &amp; Animator,   Lighting Technicians &amp; Designer</span>
+								<br>
+								<b class="resume-company " >Mediax Multimedia Concepts.</b>
+								<br>
+								<span class="resume-duration">Sept. 2012 – Jun. 2014.</span>
+							</p>
+						</li>
+
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<p>
+								<span class="tm-info-label resume-position" style="">Computer Systems Engineer. <br>(NYSC Volunteer)</span>
+								<br>
+								<b class="resume-company " > Nigeria Army Engineers.<br>
+												Engineering Search And Disposal Regiment (ESADR),<br>
+												(National Youth Service Corp) </b>
+								<br>
+								<span class="resume-duration">Aug. 2010 – Jun. 2011.</span>
+							</p>
+						</li>
+
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<p>
+								<span class="tm-info-label resume-position" style="">Physics Teacher.</span>
+								<br>
+								<b class="resume-company " > Command Day Secondary School. <br> 
+												(National Youth Service Corp)</b>
+								<br>
+								<span class="resume-duration">Aug. 2010 – Jun. 2011.</span>
+							</p>
+						</li>
+    
+						
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<P>
+								<span class="tm-info-label resume-position" style="">Multimedia Consultant.</span>
+								<br>
+								<b class="resume-company " > Glorious Fountain Ministries. </b>
+								<br>
+								<span class="resume-duration">Sept. 2012 – Present.</span>
+							</P>
+						</li>
+						
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<P>
+								<span class="tm-info-label resume-position" style="">Production Crew <br>
+									Graphics Designer,   Cinematographer,   Video Editor, Animator,   Lighting Technicians &amp; Designer.  (Volunteer)</span>
+								<br>
+								<b class="resume-company " > Glorious Fountain Ministries. </b>
+								<br>
+								<span class="resume-duration">Nov. 2008 – Aug. 2012.</span>
+							</P>
+						</li>
+
+
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<p>
+								<span class="tm-info-label resume-position" style="">Instrumentation / Electrical Electronic <br> Engineer (Intern).</span>
+								<br>
+									<b class="resume-company " >ARCO PETROCHEMICAL ENGINEERING CO. LTD. <br>
+									(Industrial Training / Internship)</b>
+								<br>
+								<span class="resume-duration">May 2008 – Oct. 2008</span>
+							</p>
+						</li>
+
+
+					</ul>
+
+
+				</div>
+
+
+
+<div class="container" style="margin-top: 80px;">
+
+
+				<div class="col-md-4 m-t-20">					
+
+					<h4 class="resume-section">Educational Background</h4>
+					
+				</div>
+
+
+
+
+				<div class="col-md-4 m-t-20">					
+					
+
+				</div>
+
+				<div class="col-md-4 m-t-20">					
+
+				</div>
+
+
+				<div class="col-md-4 m-t-20">					
+
+				</div>
+
+
+				<div class="col-md-4 m-t-20">	
+
+				</div>
+
+
+<div class="clearfix"></div>
+
+				<div class="col-md-6 col-sm-6">					
+					<h2 class="title">My <strong>Profile</strong></h2>
+					<p><span class="tm-info-label">Name</span> John White</p>
+					<p><span class="tm-info-label">Birthday</span> December 24, 1996</p>
+					<p><span class="tm-info-label">Address</span> Melbourne Victoria 3000 Australia</p>
+					<p><span class="tm-info-label">Phone</span> +001 020 0340 | 009 080 0760</p>
+					<p><span class="tm-info-label">Email</span> hello@company.com</p>
+					<p><span class="tm-info-label">Website</span> <a href="#" class="tm-red-text">www.company.com</a></p>
+				</div>
+
+
+					</div>
+				</dir>
+
+
+
+
+
+
+			
+		
+	</section>
+	<!-- END work -->
+
+
+
+
+	<!-- START RESUME -->
+	<section id="work" class="tm-padding-top-bottom-100">
+		<div class="container">
+			<div class="row">
+
+
+
+								<div class="col-md-4 col-sm-4">
 					<div class="work-wrapper">
 						<i class="fa fa-link"></i>
 						<h3 class="text-uppercase tm-work-h3">Mobile UX</h3>
@@ -383,18 +753,9 @@
 						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna.</p>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-	<!-- END work -->
 
 
 
-
-	<!-- START RESUME -->
-	<section id="resume" class="tm-padding-top-bottom-100">
-		<div class="container">
-			<div class="row">
 				<div class="col-md-6 col-sm-6">					
 					<h2 class="title">My <strong>Profile</strong></h2>
 					<p><span class="tm-info-label">Name</span> John White</p>
@@ -533,5 +894,57 @@
 	<script src="js/isotope.js"></script>
 	<script src="js/imagesloaded.min.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/lightslider.min.js" ></script>
+
+
+<script type="text/javascript">
+
+
+
+$(document).ready(function(){
+    y="1%";
+    x=parseInt($( document ).width() / 300);
+
+    if (x<1)x=1;
+    if(x<3){
+        y='-0.5%';
+        w=-5;
+        $("#content-slider li").css("right",y);
+    }else{
+        z=($( document ).width()*0.5)-300;
+        // y="-"+z+"px";
+        y="150px";
+        w=10;
+    	$("#content-slider li").css("right",y);
+    }
+    x=x+.2;
+    if(x > 4) x=4;
+    if(x > 5) x=5;
+
+
+    $("#content-slider").lightSlider({
+      loop:false,
+      keyPress:true,
+      item:x,
+      pause: 6000,
+      speed:2000,
+      auto:false,
+      pauseOnHover: true,
+      gallery: false,
+      currentPagerPosition: 'left',
+      thumbItem:9,
+      slideMargin:w,
+
+
+    });
+
+
+})
+
+
+
+</script>
+
 </body>
 </html>
