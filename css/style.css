@@ -80,7 +80,7 @@ hr {
 /* END NAVIGATION */
 
 /* START HOME */
-.templatemo-home {
+.m-home {
   background: url('../images/home-bg.jpg');
   background-size: cover;
   background-attachment: fixed;
@@ -159,8 +159,9 @@ hr {
 
 /* START PORTFOLIO */
 .tm-portfolio {
-  background: #f8f8f8;
+  background: #e8e8e8;
   padding-top: 80px;
+
 }
 .tm-portfolio .container {
   width: 100%;
@@ -175,6 +176,7 @@ hr {
 .tm-portfolio-title {
   text-align: center;
   text-transform: uppercase;
+  color: black;
 }
 .portfolio-item-title {
   font-weight: bold;
@@ -304,7 +306,6 @@ hr {
 .tm-info-label {
   font-weight: bold;
   display: inline-block;
-  width: 90px;
 }
 .tm-progress {
   background: #fff;
@@ -410,7 +411,7 @@ input { height: 50px; }
 /* END CONTACT */
 
 @media screen and (max-device-width: 1024px){
-  .templatemo-home {
+  .m-home {
     background-attachment: scroll;
   }
 }
@@ -438,4 +439,14 @@ input { height: 50px; }
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+
+.allow-text-select{
+-webkit-touch-callout: all;
+  -webkit-user-select: all;
+   -khtml-user-select: all;
+     -moz-user-select: all;
+      -ms-user-select: all;
+          user-select: all;
 }
