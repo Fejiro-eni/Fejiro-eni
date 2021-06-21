@@ -312,7 +312,7 @@ hr {
   border-radius: 2px;
   height: 4px;
 }
-.progress-bar-danger { background: #506ee8; }
+.progress-bar-danger { background: #506ee8; transition: 2s; }
 .tm-progress-label {
   font-size: 12px;
   font-weight: bold;
