@@ -322,7 +322,7 @@ hr {
 .progress-percent-small {
   display: block;
   float: right;
-  padding-right: 80px;
+  padding-right: 0px;
 }
 /* END RESUME */
 
