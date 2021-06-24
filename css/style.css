@@ -220,7 +220,7 @@ hr {
   -ms-transition: all 0.4s ease-in-out;
 }
 .portfolio-thumb:hover .portfolio-overlay {
-  opacity: 0.8;  
+  opacity: 1.8;  
   -webkit-transform: scale(1.0);
   -ms-transform: scale(1.0);
   transform: scale(1.0);
