@@ -178,18 +178,18 @@
    		margin: 0 !important;
 	}
 
-	.resume-item.active + .resume-item > .fa-dot-circle-o{
+	.resume-item.active + .resume-item > .fa-dot-circle-o, 	.resume-item.active + .resume-item > .fa-pagelines{
 			transform: translate(0px, -20px);	
 			font-size: 1.5em;
 	}
 
-	.resume-item .fa-dot-circle-o{
+	.resume-item .fa-dot-circle-o, 	.resume-item .fa-pagelines{
 		transform: translate(0px, 20px);
 		transition: .6s;
 	}
 
 
-	.resume-item .fa-dot-circle-o:after{
+	.resume-item .fa-dot-circle-o:after, .resume-item .fa-pagelines:after{
 		background: #000;
 	    content: '';
 	    height: 100vh;
@@ -207,6 +207,10 @@
 
 	.resume-item .fa-dot-circle-o{
 	    color: #000;
+	}
+
+	.resume-item .fa-pagelines{
+	    color: limegreen;
 	}
 
 	.resume-position{
@@ -299,6 +303,39 @@
     	display: none;
     }
 
+
+    .portfolio-thumb .btn{
+    	border: 1px solid;
+    	color: white;
+    	margin:2px;
+    }
+
+    .portfolio-thumb .btn:hover {
+    	background-color: white;
+    	color: #506ee8;
+    }
+
+    .portfolio-thumb .btn.play{
+    	border-radius: 50%;
+	    padding: 4px;
+    }
+
+    .portfolio-thumb .btn.play .fa-play{
+	    color: white;
+	    border: none;
+	    font-size: 18px;
+	    margin: 0;
+	    margin-left: 2px;
+    }
+
+    .portfolio-thumb .btn.play:hover {
+    	background-color: white;
+    }
+
+    .portfolio-thumb .btn.play:hover .fa-play{
+    	color: #506ee8;
+    }
+
 </style>
 
 
@@ -321,7 +358,7 @@
 					<li><a href="#home" class="smoothScroll">Home</a></li>
 					<li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
 					<li><a href="#resume" class="smoothScroll">Resume</a></li>
-					<li><a href="#resume" class="smoothScroll">Resume</a></li>
+					<li><a href="#speak" class="smoothScroll">Speaking</a></li>
 					<li><a href="#about" class="smoothScroll">About</a></li>
 					<li><a href="#contact" class="smoothScroll">Contact</a></li>
 				</ul>
@@ -339,7 +376,7 @@
 				<div class="col-md-3  head-cont">
 					<h1 class="tm-home-title hide-otherwise   animated fadeInLeft" style="animation-delay: .8s;"><span>Fejiro Eni</strong></h1>
 					<h2 class="tm-home-subtitle hide-otherwise   animated fadeInLeft" style="animation-delay: .8s;">
-						<!-- <span class="  animated fadeInDown" style="animation-delay: 1s;">I'm a</span><br> -->
+						<span class="  animated fadeInDown" style="animation-delay: 1s; font-weight: normal;">I'm a</span><!-- <br> -->
 						<span class="  animated fadeInDown" style="animation-delay: 1.2s;">Designer,</span> <!-- <seperator class=" wow animated fadeInDown" style="animation-delay: 1s;">|</seperator> -->  
 						<span class="  animated fadeInDown" style="animation-delay: 1.6s;">Engineer,</span>
 						<span class="  animated fadeInDown" style="animation-delay: 2s;">Innovator,</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator> -->  
@@ -361,8 +398,8 @@
 					<ul class="thelist  hide-otherwise">
 						<a href="#portfolio" class="smoothScroll" ><li class=" animated fadeInLeft" style="animation-delay: 3.4s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
 						<a href="#resume" class="smoothScroll" ><li class=" animated fadeInLeft" style="animation-delay: 3.6s;"><i class="fa fa-circle"> </i> Resume</li></a><br>
-						<a href="#work" class="smoothScroll" ><li class=" animated fadeInLeft" style="animation-delay: 3.8s;"><i class="fa fa-circle"> </i> Speaking</li></a><br>
-						<a href="#work" class="smoothScroll" ><li class=" animated fadeInLeft" style="animation-delay: 4s;"><i class="fa fa-circle"> </i> About</li></a><br>
+						<a href="#speak" class="smoothScroll" ><li class=" animated fadeInLeft" style="animation-delay: 3.8s;"><i class="fa fa-circle"> </i> Speaking</li></a><br>
+						<a href="#about" class="smoothScroll" ><li class=" animated fadeInLeft" style="animation-delay: 4s;"><i class="fa fa-circle"> </i> About</li></a><br>
 						<!-- <a href="#work" class="smoothScroll" ><li>Graphics Designer </li></a> -->
 					</ul>
 
@@ -370,8 +407,8 @@
 					<ul class="thelist  show-otherwise">
 						<a href="#portfolio" class="smoothScroll" ><li class=" animated fadeInRight" style="animation-delay: 3.4s;"><i class="fa fa-circle"> </i> Portfolio</li></a><br>
 						<a href="#resume" class="smoothScroll" ><li class=" animated fadeInRight" style="animation-delay: 3.6s;"><i class="fa fa-circle"> </i> Resume</li></a><br>
-						<a href="#work" class="smoothScroll" ><li class=" animated fadeInRight" style="animation-delay: 3.8s;"><i class="fa fa-circle"> </i> Speaking</li></a><br>
-						<a href="#work" class="smoothScroll" ><li class=" animated fadeInRight" style="animation-delay: 4s;"><i class="fa fa-circle"> </i> About</li></a><br>
+						<a href="#speak" class="smoothScroll" ><li class=" animated fadeInRight" style="animation-delay: 3.8s;"><i class="fa fa-circle"> </i> Speaking</li></a><br>
+						<a href="#about" class="smoothScroll" ><li class=" animated fadeInRight" style="animation-delay: 4s;"><i class="fa fa-circle"> </i> About</li></a><br>
 						<!-- <a href="#work" class="smoothScroll" ><li>Graphics Designer </li></a> -->
 					</ul>
 				</div>
@@ -402,66 +439,80 @@
 					<div class="iso-section">
 						<ul class="filter-wrapper clearfix" style=" padding: 0;">
 							<li><a href="#" class="opc-main-bg selected" data-filter="*">All</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".html">Web Apps</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".photoshop">Mobile Apps</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">UI/UX</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".wordpress">Graphics</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".mobile">Animations</a></li>
-							<li><a href="#" class="opc-main-bg" data-filter=".mobile">Start Ups</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".webapp">Web Apps</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".mobileapp">Mobile Apps</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".ui-ux">UI/UX</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".graphics">Graphics</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".animation">Animations</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".startup">Start Ups</a></li>
 						</ul>
 						<div class="iso-box-section">
 							<div class="iso-box-wrapper col4-iso-box">
-								<div class="iso-boxy html photoshop wordpress mobile col-md-4">
+								<div class="iso-boxy webapp ui-ux col-md-4">
 									<div class="portfolio-thumb">
-										<img src="images/portfolio-img1.jpg" class="fluid-img" alt="portfolio img">
+										<img src="images/recifa.jpg" class="fluid-img" alt="portfolio img">
 										<case style="">case study</case>
 										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+											<h3 class="portfolio-item-title">Recifa</h3>
+											<p>Increased user's loyality by improving User experience</p>
+											<p>
+												<a href="case-recifa.html" class="btn" >View Case</a><a href="https://www.recifa.com" class="btn" >See Product</a>
+											</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-boxy html wordpress mobile col-md-4">
+								<div class="iso-boxy html mobileapp ui-ux col-md-4">
 									<div class="portfolio-thumb">
-										<img src="images/portfolio-img2.jpg" class="fluid-img" alt="portfolio img">
+										<img src="images/bizcard.jpg" class="fluid-img" alt="portfolio img">
+										<case style="">case study</case>
 										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+											<h3 class="portfolio-item-title">BizCard</h3>
+											<p>Bring a complex idea to live with </p>
+											<p>
+												<a href="case-bizcard.html" class="btn" >View Case</a><a href="https://www.unicus.live/getbizcard" class="btn" >See Product</a>
+											</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-boxy wordpress col-md-4">
+								<div class="iso-boxy animation col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img3.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+											<h3 class="portfolio-item-title">App Promo Video</h3>
+											<p>Product explainer video </p>
+											<p>
+												<span class="btn play" style=""><i class="fa fa-play" style=""></i></span>
+											</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-boxy html mobile col-md-4">
+								<div class="iso-boxy graphics col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img4.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+											<h3 class="portfolio-item-title">Brand Identiy</h3>
+											<p>Creating an outstanding brand identity to aid market penetration</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-boxy wordpress col-md-4">
+								<div class="iso-boxy startup webapp col-md-4">
 									<div class="portfolio-thumb">
-										<img src="images/portfolio-img5.jpg" class="fluid-img" alt="portfolio img">
+										<img src="images/portfolio-img5.jpg" class="fluid-img" alt="portfolio img">	
+										<case style="">case study</case>
 										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
+											<h3 class="portfolio-item-title">Unicus.</h3>
+											<p>Starting up with a band.</p>
+											<p>
+												<a href="https://www.recifa.com" class="btn" >See Reviews</a><a href="case-recifa.html" class="btn" >Visit Website</a>
+											</p>
 										</div>
 									</div>
 								</div>
-								<div class="iso-boxy html photoshop col-md-4">
+								<div class="iso-boxy startup col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/portfolio-img6.jpg" class="fluid-img" alt="portfolio img">
 										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">UX Design</h3>
+											<h3 class="portfolio-item-title">Mediax</h3>
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
 										</div>
 									</div>
@@ -499,17 +550,6 @@
 	<!-- START work -->
 	<section id="resume" class="tm-padding-top-bottom-100">
 
-<!-- 		<a href="#work" class="btn btn-default smoothScroll tm-view-more-btn">Let's Begin</a>
-		<div class="container">
-			<div class="row">
-									<ul class="thelist">
-						<a href="#work" class="smoothScroll"><li>Electrical Electronics Engineer </li></a>
-						<a href="#work" class="smoothScroll" ><li>Software Developer </li></a>
-						<a href="#work" class="smoothScroll" ><li>UI / UX  Designer </li></a>
-						<a href="#work" class="smoothScroll" ><li>Multimedia Consultant </li></a>
-						<a href="#work" class="smoothScroll" ><li>Graphics Designer </li></a>
-
-					</ul> -->
 
 				<div class="col-md-12 " wow fadeInDown data-wow-offset="100" style=" margin-bottom: 40px;   ">
 					<h2 class="tm-portfolio-title"><strong dataooffesr>Resume</strong></h2>						
@@ -562,7 +602,16 @@
 							</p>
 						</li>
 
-    						<li class="resume-item">
+						<li class="resume-item">
+							<i class="fa fa-pagelines" ></i>
+							<p>
+								<span class="tm-info-label resume-position" >Co-founded <br>Unicus Technologies</span>
+								<br>
+								<span class="resume-duration">Apr. 2018</span>
+							</p>
+						</li>
+
+    					<li class="resume-item">
 							<i class="fa fa-dot-circle-o"  ></i>
 							<p>
 								<span class="tm-info-label resume-position" style="">Software Developer,  UI/UX Designer,   Graphics Designer,   Cinematographer,   Video Editor,  2D &amp; 3D Animator,  Lighting Technician &amp; Designer.</span>
@@ -608,6 +657,17 @@
 								<span class="resume-duration">Sept. 2012 – Jun. 2014.</span>
 							</p>
 						</li>
+
+
+						<li class="resume-item">
+							<i class="fa fa-pagelines" ></i>
+							<p>
+								<span class="tm-info-label resume-position" >Co-founded <br>Mediax Multimedia Concepts.</span>
+								<br>
+								<span class="resume-duration">Sept. 2012</span>
+							</p>
+						</li>
+
 
 						<li class="resume-item">
 							<i class="fa fa-dot-circle-o"  ></i>
@@ -748,26 +808,10 @@
 
 
 <br><br><br>
-<!-- 				<div class="col-md-6 col-sm-6">					
-					<h2 class="title">My <strong>Profile</strong></h2>
-					<p><span class="tm-info-label">Name</span> John White</p>
-					<p><span class="tm-info-label">Birthday</span> December 24, 1996</p>
-					<p><span class="tm-info-label">Address</span> Melbourne Victoria 3000 Australia</p>
-					<p><span class="tm-info-label">Phone</span> +001 020 0340 | 009 080 0760</p>
-					<p><span class="tm-info-label">Email</span> hello@company.com</p>
-					<p><span class="tm-info-label">Website</span> <a href="#" class="tm-red-text">www.company.com</a></p>
-				</div> -->
 
 
 					</div>
 				</div>
-
-
-
-
-
-
-			
 		
 	</section>
 	<!-- END work -->
@@ -775,12 +819,39 @@
 
 
 
-	<!-- START RESUME -->
-<!-- 	<section id="work" class="tm-padding-top-bottom-100">
+
+
+
+
+
+
+	<!-- START ABOUT -->
+	<section id="speak" class="tm-about" style="padding: 0; min-height: 100vh;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6" style="color: white;background: #000000a6;min-height: 100vh;padding: 40px 20px; ">
+					<div class="title">
+						<h2>This is <strong>me</strong></h2>
+						<h1 class="tm-red-text">Creative <strong>Director</strong></h1>
+					</div>
+										<p>I am a professional <strong>UX Designer</strong> and <strong>Front-End Developer</strong> creating modern and responsive designs for <strong>Web</strong> and <strong>Mobile</strong>. Let us work together. Thank you.</p>
+					<p>This is free Bootstrap v3.3.4 mobile friendly layout from <a rel="nofollow" href="https://templatemo.com">templatemo</a>. Feel free to use it for your website. Credit goes to <a rel="nofollow" href="https://pixabay.com">Pixabay</a> for photos used in this template. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END ABOUT -->
+
+
+
+
+
+	<section id="about" class="tm-padding-top-bottom-100">
 		<div class="container">
 			<div class="row">
 
-
+<!-- 
 
 								<div class="col-md-4 col-sm-4">
 					<div class="work-wrapper">
@@ -807,7 +878,7 @@
 					</div>
 				</div>
 
-
+ -->
 
 				<div class="col-md-6 col-sm-6">					
 					<h2 class="title">My <strong>Profile</strong></h2>
@@ -818,32 +889,10 @@
 					<p><span class="tm-info-label">Email</span> hello@company.com</p>
 					<p><span class="tm-info-label">Website</span> <a href="#" class="tm-red-text">www.company.com</a></p>
 				</div>
-				<div class="col-md-6 col-sm-6">
-					<h2 class="title"><strong>Some</strong> Skills</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-					<h4 class="tm-progress-label">Bootstrap <small class="progress-percent-small">100%</small></h4>
-					<div class="progress tm-progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar 1" aria-valuenow1="100" aria-valuemin1="0" aria-valuemax1="100" style="width: 100%;"></div>
-					</div>
-					<h4 class="tm-progress-label">HTML5 <small class="progress-percent-small">90%</small></h4>
-					<div class="progress tm-progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar 1" aria-valuenow1="90" aria-valuemin1="0" aria-valuemax1="100" style="width: 90%;"></div>
-					</div>
-					<h4 class="tm-progress-label">SEO <small class="progress-percent-small">80%</small></h4>
-					<div class="progress tm-progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar 1" aria-valuenow1="80" aria-valuemin1="0" aria-valuemax1="100" style="width: 80%;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- END RESUME -->
 
-	<!-- START ABOUT -->
-	<section id="about" class="tm-about" style="padding: 0; min-height: 100vh;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6" style=" color: white; background: #000000a6; border-radius: 5px; ">
+
+				
+				<div class="col-md-6 col-sm-6">
 					<div class="title">
 						<h2>This is <strong>me</strong></h2>
 						<h1 class="tm-red-text">Creative <strong>Director</strong></h1>
@@ -855,7 +904,9 @@
 			</div>
 		</div>
 	</section>
-	<!-- END ABOUT -->
+
+
+
 
 	<!-- START SOCIAL -->
 	<!-- <section id="social" class="tm-social">
@@ -906,10 +957,12 @@
 	<!-- END SOCIAL -->
 
 	<!-- START CONTACT -->
-	<section id="contact" class="tm-contact">
+<section id="contact" class="tm-contact" style="
+    padding: 0;
+">
 		<div class="container">
 			<div class="row">
-<!-- 				<div class="col-md-12">					
+				<div class="col-md-12">					
 					<h2 class="title">Drop <strong>me a line</strong></h2>
 					<hr>					
 				</div>
@@ -931,9 +984,9 @@
 						</div>
 					</form>
 				</div>
-				<div class="col-md-1 col-sm-1"></div> -->
-				<div class="col-md-12 col-sm-12">
-					<p>Copyright &copy; 2021 Fejiro Eni<br> Designer: Fejiro Eni</p>
+				<div class="col-md-1 col-sm-1"></div>
+				<div class="col-md-12 col-sm-12" style=" font-size: 14px; font-weight: bold; ">
+					<p style=" line-height: 19px; font-size: 14px; font-weight: 400; padding: 10px; padding-top: 20px; margin: 0; ">Copyright © 2021 Fejiro Eni<br> Designer: Fejiro Eni</p>
 				</div>
 			</div>
 		</div>
