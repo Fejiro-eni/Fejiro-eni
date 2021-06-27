@@ -225,7 +225,7 @@ hr {
   -ms-transform: scale(1.0);
   transform: scale(1.0);
 }
-.portfolio-overlay .fa {
+.portfolio-overlay .fa, .video-animation .fa {
   border: 1px solid #666;
   border-radius: 0;
   color: #666;
