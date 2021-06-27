@@ -320,7 +320,7 @@
 	    padding: 4px;
     }
 
-    .portfolio-thumb .btn.play .fa-play{
+    .portfolio-thumb .btn.play .fa-play, .portfolio-thumb .btn.play .fa-pause {
 	    color: white;
 	    border: none;
 	    font-size: 18px;
@@ -336,10 +336,46 @@
     	color: #506ee8;
     }
 
+    .video-animation{
+    	transition: 3s;
+    	background-position: center;
+    	background-size: cover;
+    }
+
+    .video-animation p{    
+    	text-align: center;
+	    position: absolute;
+	    width: 100%;
+	    margin-top: -43%;
+	    opacity: .7;
+	}
+
+	.video-animation .btn.play{
+	    background-color: rgb(0 0 0 / 49%);
+	}
+
+    .portfolio-thumb video{
+	    border-radius: 0px;
+	    width: auto;
+	    display: block;
+	    background-size: cover;
+	    background-position: center;
+	    height: 100%;
+	    position: absolute;
+	}
+
 </style>
 
 
 </head>
+  <script type="text/javascript">
+    Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+        get: function(){
+            return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+        }
+    })
+  </script>
+
 <body data-spy="scroll" data-target="#rock-navigation" style="background: #dadbd6; background: #fff">
 	<!-- START NAVIGATION -->
 	<div class="navbar navbar-default bs-dos-nav navbar-fixed-top sticky-navigation" role="navigation">
@@ -476,14 +512,25 @@
 								</div>
 								<div class="iso-boxy animation col-md-4">
 									<div class="portfolio-thumb">
-										<img src="images/portfolio-img3.jpg" class="fluid-img" alt="portfolio img">
+										<video id="vid1" class="" poster="null" onplay="this.style.backgroundImage=''"  preload="none" playsinline loop onclick="if(this.playing) this.pause() ; else this.play();"  ondblclick="if(this.volume == 0) this.volume=1 ; else this.volume=0; " src="images/demo-video.mp4">
+
+						    				<source id="" src="images/demo-video.mp4" type="video/" style=" background: transparent; ">  Your browser does not support this video player.  
+						    			</video>
+										<div class="video-animation" base-img="images/demo-video" base-img-max="7" base-img-ext=".jpg"  style="width: 100%; background-image: url(images/demo-video1.jpg)">
+											<img src="images/demo-video1.jpg" class="fluid-img" alt="portfolio img" style="opacity: 0;">
+											<p>
+												<span class="btn play" style=""><i class="fa fa-play pause" style=""></i></span>
+											</p>
+										</div>
+
 										<div class="portfolio-overlay">
-											<h3 class="portfolio-item-title">App Promo Video</h3>
-											<p>Product explainer video </p>
+											<h3 class="portfolio-item-title">BizCard Explainer Video</h3>
+											<p>A simple video animation created by me</p>
 											<p>
 												<span class="btn play" style=""><i class="fa fa-play" style=""></i></span>
 											</p>
 										</div>
+
 									</div>
 								</div>
 								<div class="iso-boxy graphics col-md-4">
@@ -1048,6 +1095,35 @@ $(document).ready(function(){
 })
 
 
+videoimg=1;
+
+setInterval(function(){
+	videoimg+=1;
+	videoimg=(videoimg>7)?1:videoimg;
+	$('.video-animation').css('background-image', "url(" + $(".video-animation").attr('base-img')+videoimg+$(".video-animation").attr('base-img-ext') +")");
+},4000)
+
+
+
+$(".play").click(function(){
+	
+	if( $(this).closest('.portfolio-thumb').find('video')[0].playing ){
+		
+		$(this).closest('.portfolio-thumb').find('video')[0].pause();
+		$(this).closest('.portfolio-thumb').find('video').css('background-color','transparent').addClass('hide');
+		$(this).closest('.portfolio-thumb').find('.portfolio-overlay').removeClass('hide');
+		$(this).closest('.portfolio-thumb').find('.pause').addClass('fa-play').removeClass('fa-pause');
+
+	}else{
+
+		$(this).closest('.portfolio-thumb').find('video')[0].play();
+		$(this).closest('.portfolio-thumb').find('video').css('background-color','black').removeClass('hide');
+		$(this).closest('.portfolio-thumb').find('.portfolio-overlay').addClass('hide');
+		$(this).closest('.portfolio-thumb').find('.pause').addClass('fa-pause').removeClass('fa-play');
+
+	}
+
+})
 
 </script>
 
