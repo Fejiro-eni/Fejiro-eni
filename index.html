@@ -364,6 +364,29 @@
 	    position: absolute;
 	}
 
+	/*added aninmation*/
+
+.sprout-grow {
+  animation: grow-sprout 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes grow-sprout {
+  0% {
+    height: 0em;
+    margin-left: -0.39em;
+    margin-top: 0.6em;
+    /*width: 106.863px;*/
+  }
+
+  100% {
+    height: 1.3em;
+    margin-left: -1.1em;
+    margin-top: -0.6em;
+    /*width: 106.863px;*/
+  }
+}
+
 </style>
 
 
@@ -410,14 +433,18 @@
 			<div class="row">
 				<div class="col-md-2 col-sm-1"></div>
 				<div class="col-md-3  head-cont">
-					<h1 class="tm-home-title hide-otherwise   animated fadeInLeft" style="animation-delay: .8s;"><span>Fejiro Eni</strong></h1>
-					<h2 class="tm-home-subtitle hide-otherwise   animated fadeInLeft" style="animation-delay: .8s;">
-						<span class="  animated fadeInDown" style="animation-delay: 1s; font-weight: normal;">I'm a</span><!-- <br> -->
-						<span class="  animated fadeInDown" style="animation-delay: 1.2s;">Designer,</span> <!-- <seperator class=" wow animated fadeInDown" style="animation-delay: 1s;">|</seperator> -->  
-						<span class="  animated fadeInDown" style="animation-delay: 1.6s;">Engineer,</span>
-						<span class="  animated fadeInDown" style="animation-delay: 2s;">Innovator,</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator> -->  
-						<span class="  animated fadeInDown" style="animation-delay: 2.4s;">Entrepreneur,</span>
-						<span class="  animated fadeInDown" style="animation-delay: 2.8s;">&amp; Public Speaker.</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.8s;">|</seperator> --> 
+						<h2 class="tm-home-subtitle hide-otherwise   " style="padding-bottom: 0;margin-bottom: -20px;">
+							<span class="animated fadeInDown" style="animation-delay: .6s; font-weight: normal;">I'm</span>
+						</h2>
+
+					<h1 class="tm-home-title hide-otherwise   animated fadeInLeft" style="animation-delay: 1s;"><span>Fejiro Eni</strong></h1>
+					<h2 class="tm-home-subtitle hide-otherwise   animated fadeInLeft" style="animation-delay: .8s;"><!-- <br> -->
+						<!-- <span class="  animated fadeInDown" style="animation-delay: 1.8s; font-weight: normal;">A</span> -->
+						<span class="  animated fadeInDown" style="animation-delay: 1.4s;">A Designer,</span> <!-- <seperator class=" wow animated fadeInDown" style="animation-delay: 1s;">|</seperator> -->  
+						<span class="  animated fadeInDown" style="animation-delay: 1.8s;">Engineer,</span>
+						<span class="  animated fadeInDown" style="animation-delay: 2.2s;">Innovator,</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator> -->  
+						<span class="  animated fadeInDown" style="animation-delay: 2.6s;">Entrepreneur,</span>
+						<span class="  animated fadeInDown" style="animation-delay: 3s;">&amp; Public Speaker.</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.8s;">|</seperator> --> 
 					</h2>
 
 					<h1 class="tm-home-title show-otherwise   animated fadeInRight" style="animation-delay: .8s;"><span>Fejiro Eni</strong></h1>
@@ -546,7 +573,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="iso-boxy startup webapp col-md-4">
+								<div class="iso-boxy startup  ui-ux  webapp col-md-4">
 									<div class="portfolio-thumb">
 										<img src="images/unicus.jpg" class="fluid-img" alt="Start Up: Unicus">	
 										<case style="">case study</case>
@@ -892,14 +919,40 @@
 	<section id="speak" class="tm-about" style="padding: 0; min-height: 100vh;">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6" style="color: white;background: #000000a6;min-height: 100vh;padding: 40px 20px; ">
-					<div class="title">
-						<h2>This is <strong>me</strong></h2>
-						<h1 class="tm-red-text">Creative <strong>Director</strong></h1>
-					</div>
-										<p>I am a professional <strong>UX Designer</strong> and <strong>Front-End Developer</strong> creating modern and responsive designs for <strong>Web</strong> and <strong>Mobile</strong>. Let us work together. Thank you.</p>
-					<p>This is free Bootstrap v3.3.4 mobile friendly layout from <a rel="nofollow" href="https://templatemo.com">templatemo</a>. Feel free to use it for your website. Credit goes to <a rel="nofollow" href="https://pixabay.com">Pixabay</a> for photos used in this template. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+				<div class="col-md-6" style="color: white; background: rgb(0 0 0 / 65%); min-height: 100vh;padding: 40px 20px;">
+					
+						<p style=" font-style: italic;  font-size: 1.2em; line-height: 1.2em; text-align: left; ">
+							<br><br>
+							<i class="fa fa-quote-left" style="display: block; "></i>
+							<b style=" max-width: 340px; display: block; line-height: 1.3em; margin: 10px 0; ">in a worst case senerio, retrogression far is better than stagnation.</b>
+							<i class="fa fa-quote-right"></i><br><br>
+							<span style=" font-size: .8em; max-width: 400px; display: block; margin: 10px 0; font-style: normal; ">...You'll find this hard to accept because you don't yet understand that stagnation the most dangerous, systematic and silent form of retrogression"</span>
+								<br>
+							<strong style=" display: block; font-style: normal;">- Fejiro Eni</strong>
+							<span style=" font-size: 12px; font-style: normal; display: block; margin-left: 1em;">World-class keynote speaker and author.</span> 
+						</p>
+							<br>
+						<div class="title" style="">						
+							<h3 class="tm-red-text" style="width: 154px;text-transform: none;color: white;display: inline-block;border: 5px solid white;padding: 9px 5px;white-space: nowrap;border-radius: 0 0 31px 0;">A ruthless<strong style="font-size: 1.2em;display: block;color: #ff346f;line-height: 0.9em;font-weight: bold;border-radius: 0 0 5px 0;">Anti-Stagnation</strong>Warrior<br>
+								
+							</h3>
+						</div>
+					
+					
+						
+						<!-- <p style="  text-decoration: underline; ">Philosophy</p> -->
+						<div class="title" style=" padding: 0;">						
+							<h3 class="tm-red-text" style=" text-transform: none; color: white; color: #1dde8e; font-weight: bold; ">Seize <br> every opportunity to 
+								<strong style=" font-size: 3.1em; display: block; color: #1dde8e; color: white; font-weight: normal; line-height: 0.9em; ">Learn</strong>
+								<strong style="  font-size: 3.1em;  display: block;  color: #1dde8e;  color: white; font-weight: bold; ">&amp; GRO<img class="wow  sprout-grow" src="images/sprout.png" style="height: 1.3em; position: absolute; margin-left: -1.1em; margin-top: -0.6em; visibility: visible; animation-name: grow-sprout;">W</strong>
+							</h3>
+						</div>
+						<!-- <br> -->
+					<!-- <p style="  text-decoration: underline; ">Mission</p> -->
+					<p>I provide keynotes, consulting, and virtual solutions to ensure your organization/community has the right mindset, behavior, and tools that inspire continous development through continous learning.</p><br>
+
+					
+
 				</div>
 			</div>
 		</div>
