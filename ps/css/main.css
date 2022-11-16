@@ -1,0 +1,29 @@
+*{
+	/*background: rgb(0 100 0 / 0.1) !important;*/
+}
+html, body{
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.about-img{
+	width: 60rem;
+    margin-top: 10px;
+}
+
+.footer_row{
+	display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 750px){
+	.footer_row{
+		flex-direction: column;
+	}
+	.about-img{
+		margin-top: 0;
+		width: 100%;
+	}
+}
