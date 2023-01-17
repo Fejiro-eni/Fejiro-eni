@@ -206,18 +206,18 @@
    	    margin: 0 !important;
 	}
 
-	.resume-item.active + .resume-item > .fa-dot-circle-o, 	.resume-item.active + .resume-item > .fa-pagelines{
+	.resume-item.active + .resume-item > .fa-dot-circle-o, 	.resume-item.active + .resume-item > .fa-pagelines, .resume-item.active + .resume-item > .fa-graduation-cap{
 			transform: translate(0px, -20px);	
 			font-size: 1.5em;
 	}
 
-	.resume-item .fa-dot-circle-o, 	.resume-item .fa-pagelines{
+	.resume-item .fa-dot-circle-o, 	.resume-item .fa-pagelines, .resume-item .fa-graduation-cap{
 		transform: translate(0px, 20px);
 		transition: .6s;
 	}
 
 
-	.resume-item .fa-dot-circle-o:after, .resume-item .fa-pagelines:after{
+	.resume-item .fa-dot-circle-o:after, .resume-item .fa-pagelines:after, .resume-item .fa-graduation-cap:after{
 		background: #000;
 	    content: '';
 	    height: 100vh;
@@ -237,7 +237,7 @@
 	    color: #000;
 	}
 
-	.resume-item .fa-pagelines{
+	.resume-item .fa-pagelines, .resume-item .fa-graduation-cap{
 	    color: limegreen;
 	}
 
@@ -476,7 +476,7 @@
 						<!-- <span class="  animated fadeInDown" style="animation-delay: 1.8s; font-weight: normal;">A</span> -->
 						<span class="  animated fadeInDown" style="animation-delay: 1.4s;">A Designer,</span> <!-- <seperator class=" wow animated fadeInDown" style="animation-delay: 1s;">|</seperator> -->  
 						<span class="  animated fadeInDown" style="animation-delay: 1.8s;">Engineer,</span>
-						<span class="  animated fadeInDown" style="animation-delay: 2.2s;">Innovator,</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator> -->  
+						<span class="  animated fadeInDown" style="animation-delay: 2.2s;">Data Analyst,</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.4s;">|</seperator> -->  
 						<span class="  animated fadeInDown" style="animation-delay: 2.6s;">Entrepreneur,</span>
 						<span class="  animated fadeInDown" style="animation-delay: 3s;">&amp; Public Speaker.</span> <!-- <seperator  class=" wow animated fadeInDown" style="animation-delay: 1.8s;">|</seperator> --> 
 					</h2>
@@ -486,7 +486,7 @@
 						<!-- <span class="  animated fadeInDown" style="animation-delay: 1s;">I'm a</span><br> -->
 						<span class="  animated fadeInDown" style="animation-delay: 1.2s;">Designer,</span><br>
 						<span class="  animated fadeInDown" style="animation-delay: 1.6s;">Engineer,</span><br>
-						<span class="  animated fadeInDown" style="animation-delay: 2s;">Innovator,</span><br>
+						<span class="  animated fadeInDown" style="animation-delay: 2s;">Data Analyst,</span><br>
 						<span class="  animated fadeInDown" style="animation-delay: 2.4s;">Entrepreneur,</span><br>
 						<span class="  animated fadeInDown" style="animation-delay: 2.8s;">&amp; Public Speaker.</span><br>
 					</h2>
@@ -518,6 +518,41 @@
 
 
 
+<section id="about" class="tm-padding-top-bottom-100">
+		<div class="container">
+			<div class="row">
+
+
+				<div class="col-md-6 col-sm-6">
+					<div class="">						
+						<h4 class="tm-red-text"><strong style="  text-transform: none; "> Summary:</strong></h4>
+					</div>
+						<p>Highly experienced and versatile IT professional with over 9 years of experience in various IT roles including IT specialist, CTO, systems architect, and UI/UX designer. Strong background in electrical and electronics engineering and computer science. Proven track record of success in leading complex projects and implementing innovative solutions to improve efficiency and drive business growth.<br>
+						</p>
+					
+					
+				</div>
+
+				
+				<div class="col-md-6 col-sm-6">
+					<div class="">
+						
+						<h4 class="tm-red-text"><strong style="  text-transform: none; "> .</strong></h4>
+					</div>
+						<p>
+						I’m experienced with HTML, CSS, PHP, JavaScript, Python, SQL, R, Tableau, Power BI, Figma, After Effects, Premier Pro, Photoshop, Google Analytics, and AWS. I’m very passionate about creating relevant solutions and using data to solve complex problems.<br>
+						An amazing public speaker and an enthusiastic entrepreneur, with an excellent, teamwork, and leadership skill.
+						</p>
+					
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
 	<!-- START PORTFOLIO -->
 	<section id="portfolio" class="tm-portfolio">
 		<div class="container">
@@ -538,6 +573,7 @@
 							<li><a href="#" class="opc-main-bg selected" data-filter="*">All</a></li>
 							<li><a href="#" class="opc-main-bg" data-filter=".webapp">Web Apps</a></li>
 							<li><a href="#" class="opc-main-bg" data-filter=".mobileapp">Mobile Apps</a></li>
+							<li><a href="#" class="opc-main-bg" data-filter=".datavis">Data Vis</a></li>
 							<li><a href="#" class="opc-main-bg" data-filter=".ui-ux">UI/UX</a></li>
 							<li><a href="#" class="opc-main-bg" data-filter=".graphics">Graphics</a></li>
 							<li><a href="#" class="opc-main-bg" data-filter=".animation">Animations</a></li>
@@ -698,7 +734,7 @@
 
 
 	<!-- START work -->
-	<section id="resume" class="tm-padding-top-bottom-100" style="display: none;">
+	<section id="resume" class="tm-padding-top-bottom-100">
 
 
 				<div class="col-md-12 " wow fadeInDown data-wow-offset="100" style=" margin-bottom: 40px;   ">
@@ -718,18 +754,39 @@
 						</li>
 
 
+						<li class="resume-item nh uix ">
+							<i class="fa fa-graduation-cap"  ></i>
+							<p>
+								<span class="tm-info-label resume-position" style="">MSc Big Data Technologies</span>
+								<br>
+								<b class="resume-company " >University of Westminster.</b>
+								<br>
+								<span class="resume-duration">2023</span>
+							</p>
+						</li>
 
 						<li class="resume-item">
 							<i class="fa fa-dot-circle-o"  ></i>
 							<p>
-								<span class="tm-info-label resume-position" style="">Director of Operations.</span>
+								<span class="tm-info-label resume-position" style="">IT Systems and Solutions Architect.</span>
 								<br>
-								<b class="resume-company " >Unicus Technologies.</b>
+								<b class="resume-company " >Peek Solutions.</b>
 								<br>
-								<span class="resume-duration">Dec. 2019 - Present</span>
+								<span class="resume-duration">Feb 2022 - Nov 2022</span>
 							</p>
 						</li>
 
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<p>
+								<span class="tm-info-label resume-position" style="">IT Director of Operations.</span>
+								<br>
+								<b class="resume-company " >Unicus Technologies.</b>
+								<br>
+								<span class="resume-duration">Dec. 2019 - Feb 2022</span>
+							</p>
+						</li>
+<!-- 
 						<li class="resume-item">
 							<i class="fa fa-dot-circle-o" ></i>
 							<p>
@@ -739,16 +796,16 @@
 								<br>
 								<span class="resume-duration">Aug. 2019 – Dec 2019.</span>
 							</p>
-						</li>
+						</li> -->
 
 						<li class="resume-item">
 							<i class="fa fa-dot-circle-o" ></i>
 							<p>
-								<span class="tm-info-label resume-position" >Lead Software Engineer.</span>
+								<span class="tm-info-label resume-position" >CTO and Lead Software Engineer.</span>
 								<br>
 								<b class="resume-company " >Unicus Technologies.</b>
 								<br>
-								<span class="resume-duration">Apr. 2018 – Aug 2019.</span>
+								<span class="resume-duration">Apr 2018 – Dec 2019.</span>
 							</p>
 						</li>
 
@@ -757,7 +814,7 @@
 							<p>
 								<span class="tm-info-label resume-position" >Co-founded <br>Unicus Technologies</span>
 								<br>
-								<span class="resume-duration">Apr. 2018</span>
+								<span class="resume-duration">Apr 2018</span>
 							</p>
 						</li>
 
@@ -772,16 +829,16 @@
 							</p>	
 						</li>
 
-						<li class="resume-item">
+<!-- 						<li class="resume-item">
 							<i class="fa fa-dot-circle-o"  ></i>
 							<p>
 								<span class="tm-info-label resume-position" style="">Multimedia Consultant.</span>
 								<br>
-								<b class="resume-company " >Mediax Multimedia Concepts.</b>
+								<b class="resume-company " >Mediax Multimedia Concepts·</b> Part-time/Contract
 								<br>
 								<span class="resume-duration">Oct. 2015  - Present</span>
 							</p>
-						</li>
+						</li> -->
 
 						<li class="resume-item">
 							<i class="fa fa-dot-circle-o"  ></i>
@@ -818,16 +875,41 @@
 							</p>
 						</li>
 
+						
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<P>
+								<span class="tm-info-label resume-position" style="">Multimedia Consultant.</span>
+								<br>
+								<b class="resume-company " > Glorious Fountain Ministries. </b>
+								<br>· Voluntary Service
+								<br>
+								<span class="resume-duration">Sept. 2012 – Present.</span>
+							</P>
+						</li>
+						
+						<li class="resume-item">
+							<i class="fa fa-dot-circle-o"  ></i>
+							<P>
+								<span class="tm-info-label resume-position" style="">
+									Graphics Designer,   Cinematographer,   Video Editor, Animator,   Lighting Technician &amp; Designer.</span>
+								<br>
+								<b class="resume-company " > Glorious Fountain Ministries. </b>
+								<br>· Voluntary Service
+								<br>
+								<span class="resume-duration">Nov. 2008 – Aug. 2012.</span>
+							</P>
+						</li>
 
 						<li class="resume-item">
 							<i class="fa fa-dot-circle-o"  ></i>
 							<p>
-								<span class="tm-info-label resume-position" style="">Computer Systems Engineer. <br>(NYSC Volunteer)</span>
+								<span class="tm-info-label resume-position" style="">IT Support Engineer. </span>
 								<br>
 								<b class="resume-company " > Nigeria Army Engineers.<br>
 												Engineering Search And Disposal Regiment (ESADR),<br>
-												(National Youth Service Corp) </b>
-								<br>
+												National Youth Service Corp </b>
+								<br>· Paramilitary Service<br>
 								<span class="resume-duration">Aug. 2010 – Jun. 2011.</span>
 							</p>
 						</li>
@@ -838,35 +920,13 @@
 								<span class="tm-info-label resume-position" style="">Physics Teacher.</span>
 								<br>
 								<b class="resume-company " > Command Day Secondary School. <br> 
-												(National Youth Service Corp)</b>
+												National Youth Service Corp</b>
 								<br>
 								<span class="resume-duration">Aug. 2010 – Jun. 2011.</span>
 							</p>
 						</li>
     
-						
-						<li class="resume-item">
-							<i class="fa fa-dot-circle-o"  ></i>
-							<P>
-								<span class="tm-info-label resume-position" style="">Multimedia Consultant.</span>
-								<br>
-								<b class="resume-company " > Glorious Fountain Ministries. </b>
-								<br>
-								<span class="resume-duration">Sept. 2012 – Present.</span>
-							</P>
-						</li>
-						
-						<li class="resume-item">
-							<i class="fa fa-dot-circle-o"  ></i>
-							<P>
-								<span class="tm-info-label resume-position" style="">
-									Graphics Designer,   Cinematographer,   Video Editor, Animator,   Lighting Technician &amp; Designer.  (Volunteer)</span>
-								<br>
-								<b class="resume-company " > Glorious Fountain Ministries. </b>
-								<br>
-								<span class="resume-duration">Nov. 2008 – Aug. 2012.</span>
-							</P>
-						</li>
+
 
 
 						<li class="resume-item">
@@ -874,8 +934,8 @@
 							<p>
 								<span class="tm-info-label resume-position" style="">Instrumentation / Electrical Electronic <br> Engineer (Intern).</span>
 								<br>
-									<b class="resume-company " >ARCO PETROCHEMICAL ENGINEERING CO. LTD. <br>
-									(Industrial Training / Internship)</b>
+									<b class="resume-company " >ARCO PETROCHEMICAL ENGINEERING CO. LTD.</b> <br>
+									 · Internship
 								<br>
 								<span class="resume-duration">May 2008 – Oct. 2008</span>
 							</p>
@@ -921,9 +981,9 @@
 					<div class="progress tm-progress">
 						<div class="progress-bar1  wow animated grow-line" data-wow-offset="50" style="width: 80%;"></div>
 					</div>
-					<h4 class="tm-progress-label">Data Science <small class="progress-percent-small">60%</small></h4>
+					<h4 class="tm-progress-label">Data Science <small class="progress-percent-small">80%</small></h4>
 					<div class="progress tm-progress">
-						<div class="progress-bar1  wow animated grow-line" data-wow-offset="50" style="width: 60%;"></div>
+						<div class="progress-bar1  wow animated grow-line" data-wow-offset="50" style="width: 80%;"></div>
 					</div>
 				</div>
 
@@ -984,9 +1044,9 @@
 						<p style=" font-style: italic;  font-size: 1.2em; line-height: 1.2em; text-align: left; ">
 							<br><br>
 							<i class="fa fa-quote-left" style="display: block; "></i>
-							<b style=" max-width: 340px; display: block; line-height: 1.3em; margin: 10px 0; ">in a worst case senerio, retrogression far is better than stagnation.</b>
+							<b style=" max-width: 340px; display: block; line-height: 1.3em; margin: 10px 0; ">in the worst-case scenario, retrogression is far better than stagnation.</b>
 							<i class="fa fa-quote-right"></i><br><br>
-							<span style=" font-size: .8em; max-width: 400px; display: block; margin: 10px 0; font-style: normal; ">...You'll find this hard to accept because you don't yet understand that stagnation is the most dangerous, systematic and silent form of retrogression"</span>
+							<span style=" font-size: .8em; max-width: 400px; display: block; margin: 10px 0; font-style: normal; ">...You'll find this hard to accept because you don't yet understand that stagnation is the most dangerous, systematic and silent form of retrogression. Retrogression might be a result of trying and failing, stagnation is the result of doing absolutely nothing.</span>
 								<br>
 							<strong style=" display: block; font-style: normal;">- Fejiro Eni</strong>
 							<span style=" font-size: 12px; font-style: normal; display: block; margin-left: 1em;">World-class keynote speaker and author.</span> 
@@ -1034,8 +1094,8 @@
 					<p><span class="tm-info-label">Name</span> Fejiro Eni</p>
 					<!-- <p><span class="tm-info-label">Birthday</span> December 23</p> -->
 					<p><span class="tm-info-label">Address</span> Dartford, Kent. United Kingdom.</p>
-					<p><span class="tm-info-label">Email</span> <a href="mailto:fejiro@unicus.live" class="tm-red-text">fejiro@unicus.live</a></p>
-					<p><span class="tm-info-label">Company Website</span> <a href="https://www.unicus.live" class="tm-red-text">www.unicus.live</a></p>
+					<p><span class="tm-info-label">Email</span> <a href="mailto:fejiro.eni@gmail.com" class="tm-red-text">fejiro.eni@gmail.com</a></p>
+					<p><span class="tm-info-label">LinkedIn</span> <a href="https://www.linkedin.com/in/fejiro-eni/" class="tm-red-text">in/fejiro-eni</a></p>
 					<br><br>
 				</div>
 
@@ -1047,7 +1107,7 @@
 						<h1 class="tm-red-text">ME -<strong style="  text-transform: none; "> Simplified</strong></h1>
 					</div>
 						<p>Each day, I aspire to be a better version of myself than the day before, I realize I still have a long way to go, and I'm very ready to learn my way there.<br> My greatest knowledge is the fact that no knowledge is carved in stones. Knowledge in itself is bound to evolve, and I'm ready to evolve to understand it.<br> Finally, here is one of my quotes I think you would find inspiring...<br><br> 
-							<i style=" font-weight: normal; ">" The Lion that comes in first place in a rat race would only be called the fastest rat. But a rat that dies in a pride fight would be seen to have the heart of a lion. "</i><br>- Fejiro Eni (2012)
+							<i style=" font-weight: normal; ">" The Lion that comes in first place in a rat race would only be called the fastest rat, but a rat that dies in a pride fight would be seen to have the heart of a lion. "</i><br>- Fejiro Eni (2012)
 						</p>
 					
 					
