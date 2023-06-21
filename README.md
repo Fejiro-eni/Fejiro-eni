@@ -15,7 +15,10 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-see https://fejiro-eni.github.io
+I am currently editting My Profile to get rid of error, update information and improve the UI.
+Please check back soon.
+
+# 💖
 
 <!-- #### Here's whats up with me at the moment
 - There is nothing here for now
