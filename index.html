@@ -462,7 +462,7 @@
 	<!-- END NAVIGATION -->
 
 	<!-- START HOME -->
-	<section id="home" class="m-home wow fadeInLeft prevent-text-select" style="opacity: 1 !important; ">
+	<section id="home" class="m-home wow fadeInLeft prevent-text-select" style="opacity: 1 !important; transition: 3s; background-image: url(images/home-bg-1.jpg)">
 		<div class="container ">
 			<div class="row">
 				<div class="col-md-2 col-sm-1"></div>
@@ -1219,6 +1219,19 @@ setInterval(function(){
 
 },4000)
 
+
+n=1;
+setTimeout(function() {
+	n++;
+	$('#home').css('background-image','url(images/home-bg-'+n+'.jpg')
+
+},5000)
+setInterval(function(){
+	n++;
+	if(n>2)n=1;
+	$('#home').css('background-image','url(images/home-bg-'+n+'.jpg')
+
+},20000)
 
 
 $(".play").click(function(){
